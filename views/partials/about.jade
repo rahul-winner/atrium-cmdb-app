@@ -1,0 +1,50 @@
+container
+  .container-fluid  
+    .row
+      nav.navbar.navbar-default(role='navigation')
+        .navbar-inner
+          a.navbar-brand
+            img.navlogo(alt="bmc" src="images/TSODev_logo.png")
+          ul.nav.navbar-nav
+            li
+              a(ng-click="goHome()",href='#/query') Home
+          ul.nav.navbar-nav.pull-right
+            li.dropdown
+              a.dropdown-toggle(data-toggle='dropdown')
+                | User 
+                b.caret
+              ul.dropdown-menu.dropdown-menu-right
+                li
+                  a(href='#/user') Info
+                li
+                  a(ng-click="Logout()", type="submit") Disconnect
+                li.divider
+                li
+                  a(href='#/prefs') Preferences
+                li.divider
+                li
+                  a(href='#/About') About
+.panel.panel-default
+  .panel-heading
+    h5 {{ heading }}
+  .panel-body
+    h3 {{ usertitle }}
+    .container()
+    .container
+      .row
+        .col-md-4
+        .col-sm-6.col-md-4
+          .thumbnail
+            img(src='images/TSODev_logo.png', alt='TSODev')
+            .caption
+              h3 API CMDB Test App
+              p
+                | This application is a proove of concept using bmc Atrium CDMB RestAPI to provide graphical results.
+              pre.
+                version {{ version }} build {{ build }}                
+              p
+                a.btn.btn-primary(ng-click="QuitAbout()", role='button') Ok
+              p by TSODev - November 2015
+              p License : {{ license }}
+        .col-md-4
+
