@@ -1,4 +1,4 @@
-# Atrium CMDB Explorer App
+#Explorer App
 
 This is a simple NodeJS Application build to consume some Atrium CMDB RestAPI services to produce higher level RestAPI. (Query Instance - Query Relationship) . The App display Configuration Items and Relationship on graphs .
 
